@@ -1,14 +1,11 @@
 <h1 align="center">Welcome to Portfolio 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-3.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://twitter.com/https:\/\/twitter.com\/MarieBaude95" target="_blank">
-    <img alt="Twitter: https:\/\/twitter.com\/MarieBaude95" src="https://img.shields.io/twitter/follow/https:\/\/twitter.com\/MarieBaude95.svg?style=social" />
-  </a>
 </p>
 
-> Portfolio
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) Sanity  ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
-### 🏠 [Homepage](https://mariebaude.netlify.app/)
+> Portfolio
 
 ### ✨ [Demo](https://mariebaude.netlify.app/)
 
