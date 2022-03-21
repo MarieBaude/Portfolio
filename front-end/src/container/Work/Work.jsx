@@ -46,7 +46,7 @@ const Work = () => {
       <h2 className="head-text">My Portfolio Section</h2>
 
       <div className='app__work-filter'>
-        {['All', 'Graphic', 'React JS', 'Nest JS' ].map((item, index) => (
+        {['All', 'Graphic', 'React JS', 'Sanity', 'Nest JS' ].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -116,3 +116,8 @@ export default AppWrap(
   'work',
   'app',
 );
+
+
+
+
+
