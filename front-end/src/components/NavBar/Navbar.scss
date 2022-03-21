@@ -34,12 +34,11 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-    color: #55198b;
   
     li {
       margin: 0 1rem;
       cursor: pointer;
-  
+
       flex-direction: column;
   
       div {
@@ -54,6 +53,8 @@
       a {
         text-decoration: none;
         flex-direction: column;
+
+        color: #55198b;
   
         text-transform: uppercase;
         font-weight: 500;
