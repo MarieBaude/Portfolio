@@ -13,9 +13,9 @@
 👤 **Marie Baude**
 
 * Website: https://mariebaude.netlify.app/
-* Twitter: [@https:\/\/twitter.com\/MarieBaude95](https://twitter.com/MarieBaude95)
-* Github: [@https:\/\/github.com\/MarieBaude](https://github.com/MarieBaude)
-* LinkedIn: [@https:\/\/www.linkedin.com\/in\/baudemarie\/](https://linkedin.com/in/baudemarie\/)
+* Twitter: [@MarieBaude95](https://twitter.com/MarieBaude95)
+* Github: [@MarieBaude](https://github.com/MarieBaude)
+* LinkedIn: [@baudemarie](https://linkedin.com/in/baudemarie\/)
 
 ## Show your support
 
