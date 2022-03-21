@@ -8,6 +8,21 @@ import { urlFor, client } from '../../client';
 
 import './Work.scss'
 
+interface WorkType {
+  imgUrl: string;
+  projectLink: string;
+  codeLink: string;
+  title: string;
+  tags: string;
+  description: string;
+  name: string;
+}
+
+interface SetAnimateCardType {
+  y: number;
+  opacity: number;
+}
+
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
@@ -26,7 +41,7 @@ const Work = () => {
   }, [])
   
 
-  const handleWorkFilter = (item) => {
+  const handleWorkFilter = (item:string) => {
     setActiveFilter(item);
     setAnimateCard([{ y:100, opacity:0 }]);
 
@@ -37,7 +52,7 @@ const Work = () => {
     if (item === 'All') {
       setFilterWork(works);
     } else {
-      setFilterWork(works.filter((work) => work.tags.includes(item)));
+      setFilterWork(works.filter((work:WorkType) => work.tags.includes(item)));
     }
   }
 
@@ -62,10 +77,10 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.map((work, index) => (
+        {filterWork.map((work:WorkType, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex" >
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <img src={urlFor(work.imgUrl).url()} alt={work.name} />
             
               <motion.div
                 whileHover={{ opacity: [0, 1] }}

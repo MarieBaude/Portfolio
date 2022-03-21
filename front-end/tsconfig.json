@@ -19,5 +19,5 @@
       "noEmit": true,
       "jsx": "react"
     },
-    "include": ["./node_modules/@sanity/base/types/**/*.ts", "./**/*.ts", "./**/*.tsx", "src/wrapper/AppWrap.ts", "src/container/Work/Work.jsx", "src/constants/images.js"],
+    "include": ["./node_modules/@sanity/base/types/**/*.ts", "./**/*.ts", "./**/*.tsx", "src/wrapper/AppWrap.ts", "src/container/Work/Work.tsx", "src/constants/images.js"],
   }
