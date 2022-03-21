@@ -9,7 +9,7 @@ export const App = () => {
   return <>
     <div className='app'>
       <Navbar /> 
-       <Header />
+      <Header />
       <Skills />
       <Work />
       <Footer /> 
