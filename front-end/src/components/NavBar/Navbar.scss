@@ -1,10 +1,8 @@
 .app__navbar {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 1rem 2rem;
     background: rgba(235, 235, 235, 0.25);
     backdrop-filter: blur(4px);
@@ -35,8 +33,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
     list-style: none;
+    color: #55198b;
   
     li {
       margin: 0 1rem;
@@ -82,7 +80,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cadetblue;
+    background-color: #29c5d4;
     
     svg {
         width: 70%;
@@ -147,7 +145,7 @@
               transition: all 0.3s ease-in-out;
     
               &:hover {
-                color: var(--secondary-color);
+                color: #29c5d4;
               }
             }
           }
