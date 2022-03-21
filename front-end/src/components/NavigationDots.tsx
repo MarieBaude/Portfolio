@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NavigationDots = ({ active }) => {
+const NavigationDots = ( active:string ) => {
   return (
     <div className="app__navigation">
         {['home', 'skills', 'work', 'contact'].map((item, index) => (
