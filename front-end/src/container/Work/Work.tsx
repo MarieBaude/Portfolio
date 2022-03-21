@@ -18,11 +18,6 @@ interface WorkType {
   name: string;
 }
 
-interface SetAnimateCardType {
-  y: number;
-  opacity: number;
-}
-
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
@@ -43,10 +38,10 @@ const Work = () => {
 
   const handleWorkFilter = (item:string) => {
     setActiveFilter(item);
-    setAnimateCard([{ y:100, opacity:0 }]);
+    setAnimateCard({ y:100, opacity:0 });
 
     setTimeout(() => {
-      setAnimateCard([{ y:0, opacity: 1 }])
+      setAnimateCard({ y:0, opacity: 1 })
     }, 500);
 
     if (item === 'All') {
