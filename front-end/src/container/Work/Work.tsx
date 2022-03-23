@@ -8,6 +8,16 @@ import { urlFor, client } from '../../client';
 
 import './Work.scss'
 
+interface WorkType {
+  imgUrl: string;
+  projectLink: string;
+  codeLink: string;
+  title: string;
+  tags: string;
+  description: string;
+  name: string;
+}
+
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
@@ -26,18 +36,18 @@ const Work = () => {
   }, [])
   
 
-  const handleWorkFilter = (item) => {
+  const handleWorkFilter = (item:string) => {
     setActiveFilter(item);
-    setAnimateCard([{ y:100, opacity:0 }]);
+    setAnimateCard({ y:100, opacity:0 });
 
     setTimeout(() => {
-      setAnimateCard([{ y:0, opacity: 1 }])
+      setAnimateCard({ y:0, opacity: 1 })
     }, 500);
 
     if (item === 'All') {
       setFilterWork(works);
     } else {
-      setFilterWork(works.filter((work) => work.tags.includes(item)));
+      setFilterWork(works.filter((work:WorkType) => work.tags.includes(item)));
     }
   }
 
@@ -46,7 +56,7 @@ const Work = () => {
       <h2 className="head-text">My Portfolio Section</h2>
 
       <div className='app__work-filter'>
-        {['All', 'Graphic', 'React JS', 'Nest JS' ].map((item, index) => (
+        {['All', 'Graphic', 'React JS', 'Sanity', 'Nest JS' ].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -62,10 +72,10 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.map((work, index) => (
+        {filterWork.map((work:WorkType, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex" >
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <img src={urlFor(work.imgUrl).url()} alt={work.name} />
             
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
@@ -116,3 +126,8 @@ export default AppWrap(
   'work',
   'app',
 );
+
+
+
+
+

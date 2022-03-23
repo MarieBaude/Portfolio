@@ -1,8 +1,10 @@
 #home {
   position: relative;
-  background: url("../../assets/bgWhite.png");
-  background-size: cover;
-  
+
+  @media screen and (min-width: 1050px) {
+    background: url("../../assets/bgWhite.png");
+    background-size: cover;
+  }
     .app__wrapper {
       padding: 0;
   
