@@ -2,18 +2,21 @@ import React from 'react';
 
 import { Footer, Header, Skills, Work } from './container';
 import { Navbar } from './components';
+
 import './App.scss';
 
 export const App = () => {
-  return (
+  return <>
     <div className='app'>
       <Navbar /> 
       <Header />
       <Skills />
       <Work />
-      <Footer />
+      <Footer /> 
     </div>
-  )
+  </>
 };
 
 export default App;
+
+

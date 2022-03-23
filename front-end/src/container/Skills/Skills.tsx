@@ -5,6 +5,22 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
 
+interface ExperienceType {
+  year: number;
+  works: any;
+}
+
+interface SkillType {
+  name: string;
+  bgColor: string;
+  icon: string;
+}
+
+interface WorkType {
+  name: string;
+  company: string;
+}
+
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
@@ -28,7 +44,7 @@ const Skills = () => {
 
     <div className="app__skills-container">
       <motion.div className="app__skills-list">
-        {skills.map((skill) => (
+        {skills.map((skill:SkillType) => (
           <motion.div
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
@@ -39,7 +55,7 @@ const Skills = () => {
               className="app__flex"
               style={{ backgroundColor: skill.bgColor }}
             >
-              <img src={urlFor(skill.icon)} alt={skill.name} />
+              <img src={urlFor(skill.icon).url()} alt={skill.name} />
             </div>
             <p className="p-text">{skill.name}</p>
           </motion.div>
@@ -47,14 +63,14 @@ const Skills = () => {
       </motion.div>
 
       <div className="app__skills-exp">
-        {experiences.map((experience) => (
+        {experiences.map((experience:ExperienceType) => (
           <motion.div className="app__skills-exp-item" key={experience.year}>
             <div className="app__skills-exp-year">
               <p className="bold-text">{experience.year}</p>
             </div>
 
             <motion.div className="app__skills-exp-works">
-              {experience.works.map((work) => (
+              {experience.works.map((work:WorkType) => (
                 <>
                   <motion.div
                     whileInView={{ opacity: [0, 1] }}

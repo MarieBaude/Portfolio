@@ -6,13 +6,13 @@ import './Footer.scss';
 
 
 const Footer = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '', username: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const { username, email, message } = formData;
 
-  const handleChangeInput = (e) => {
+  const handleChangeInput = (e:any) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
